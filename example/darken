@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+use Darken\Console\Application;
+use App\Config;
+require __DIR__ . '/vendor/autoload.php';
+$config = new Config(
+    rootDirectoryPath: getcwd(),
+);
+$exitCode = (new Application($config))
+    ->run();
+
+exit($exitCode);
