@@ -4,20 +4,19 @@ namespace MyExtension\Build;
 
 class Extension extends \Darken\Service\Extension
 {
-    public function __construct(\MyExtension\MyExtensionConfig $myExtensionConfig) {
-            $this->registerDefinition('MyExtension\MyExtensionConfig', $myExtensionConfig);
+    public function __construct(\Darken\Sentry\SentryConfig $sentryConfig) {
+            $this->registerDefinition('Darken\Sentry\SentryConfig', $sentryConfig);
         }
 
     public function getClassMap(): array
     {
         return array (
-  'MyExtension\\Build\\Components\\ExampleComponent' => '/Components/ExampleComponent.php',
 );
     }
 
     public function getSerializedEvents(): string
     {
-        return 'YTowOnt9';
+        return 'YToxOntzOjMwOiJEYXJrZW5cRXZlbnRzXEFwcFNodXRkb3duRXZlbnQiO2E6MTp7aTowO3M6MjQ6IkRhcmtlblxTZW50cnlcQ2FwdHVyZUxvZyI7fX0=';
     }
 
     public function getSerializedMiddlewares(): string

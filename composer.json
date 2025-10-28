@@ -1,9 +1,10 @@
 {
-    "name": "darkenphp/extension",
+    "name": "darkenphp/sentry",
     "description": "A Darken boilerplate for creating a new extension.",
     "type": "extension",
     "require": {
-        "darkenphp/framework": "dev-main"
+        "darkenphp/framework": "dev-main",
+        "sentry/sentry": "^4.17"
     },
     "require-dev": {
         "phpstan/phpstan": "^2.1",
@@ -11,8 +12,8 @@
     },
     "autoload": {
         "psr-4": {
-            "MyExtension\\Build\\" : ".build",
-            "MyExtension\\" : "src"
+            "Darken\\Sentry\\Build\\" : ".build",
+            "Darken\\Sentry\\" : "src"
         }
     },
     "scripts": {
