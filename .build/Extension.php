@@ -1,6 +1,6 @@
 <?php
 
-namespace MyExtension\Build;
+namespace Darken\Sentry\Build;
 
 class Extension extends \Darken\Service\Extension
 {

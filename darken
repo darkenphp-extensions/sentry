@@ -87,7 +87,7 @@ $config = new class implements ConfigInterface, ContainerServiceInterface, Event
      */
     public function getBuildOutputNamespace(): string
     {
-        return 'MyExtension\\Build';
+        return 'Darken\\Sentry\\Build';
     }
 
     /**
