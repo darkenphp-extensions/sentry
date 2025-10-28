@@ -1,5 +1,30 @@
-# Extension
+# Sentry
 
-A Darken boilerplate for creating a new extension.
+composer require darkenphp/sentry
 
-> The build artifacts in `.build` will be commited and the composer.json autoloading points to the build directory. For development just run `composer watch` and the build will be updated on every change (or run `composer build` to build once).
+add to your Config:
+
+```php
+
+use Darken\Sentry\Build\Extension as SentryExtension;
+use Darken\Sentry\SentryConfig;
+use Darken\Service\ExtensionService;
+
+class Config extends BaseConfig implements ExtensionServiceInterface
+{
+    // .....
+
+    public function extensions(ExtensionService $service): ExtensionService
+    {
+        return $service
+            ->register(new SentryExtension(
+                new SentryConfig(
+                    dsn: 'https://xxx@yyy.ingest.us.sentry.io/123123',
+                    isActive: true, // optional use $this->getDebugMode()
+                )
+            ));
+    }
+
+    // .....
+}
+```
